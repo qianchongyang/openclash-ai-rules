@@ -1,0 +1,124 @@
+# NAME: AI
+# AUTHOR: Claude Code
+# UPDATED: 2026-04-19
+# FORMAT: Clash classical rules
+# PURPOSE: AI traffic only; Claude full coverage first, plus ChatGPT / Gemini / GitHub Copilot / other AI platforms
+
+# > Claude / Anthropic 核心
+DOMAIN,api.anthropic.com
+DOMAIN,cdn.anthropic.com
+DOMAIN,mcp.anthropic.com
+DOMAIN,console.anthropic.com
+DOMAIN,workbench.anthropic.com
+DOMAIN,platform.claude.com
+DOMAIN,code.claude.com
+DOMAIN,support.claude.com
+DOMAIN,status.claude.com
+DOMAIN,downloads.claude.ai
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic-com.ghost.io
+DOMAIN,statsig.anthropic.com
+DOMAIN,cdn.usefathom.com
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,anthropic.com.cdn.cloudflare.net
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,trust.anthropic.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,sentry.io
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR6,2607:6bc0::/32,no-resolve
+IP-ASN,399358,no-resolve
+
+# > OpenAI / ChatGPT
+DOMAIN,auth0.openai.com
+DOMAIN,pay.openai.com
+DOMAIN,platform.openai.com
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,openai-api.arkoselabs.com
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,arkoselabs.com
+IP-ASN,20473,no-resolve
+
+# > Gemini / Google AI
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN,aistudio.google.com
+DOMAIN,aistudio-pa.clients6.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,gemini-pa.googleapis.com
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,android.googleapis.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+
+# > GitHub Copilot / GitHub AI
+DOMAIN,api.githubcopilot.com
+DOMAIN,origin-tracker.githubusercontent.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,githubcopilotusercontent.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,business.githubcopilot.com
+DOMAIN-KEYWORD,copilot
+
+# > xAI / Grok
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+
+# > Perplexity
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,perplexity.com
+
+# > Poe
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,poecdn.net
+
+# > Meta AI
+DOMAIN-SUFFIX,meta.ai
+
+# > 其他常见 AI 平台
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,lechat.ai
+DOMAIN-SUFFIX,notebooklm.google.com
+
+# > 关键词兜底（放最后）
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-KEYWORD,gemini
+DOMAIN-KEYWORD,grok
+DOMAIN-KEYWORD,perplexity
+DOMAIN-KEYWORD,poe
+DOMAIN-KEYWORD,datadog
+DOMAIN-KEYWORD,sift
