@@ -1,8 +1,8 @@
 # NAME: AI
 # AUTHOR: Claude Code
-# UPDATED: 2026-04-19
+# UPDATED: 2026-04-27
 # FORMAT: Clash classical rules
-# PURPOSE: AI traffic only; Claude full coverage first, plus ChatGPT / Gemini / GitHub Copilot / other AI platforms
+# PURPOSE: AI traffic and related access chains; Claude full coverage first, plus ChatGPT / Gemini / YouTube / GitHub Copilot / other platforms
 
 # > Claude / Anthropic 核心
 DOMAIN,api.anthropic.com
@@ -79,6 +79,18 @@ DOMAIN-SUFFIX,apis.google.com
 DOMAIN-SUFFIX,android.googleapis.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
+
+# > YouTube / Google Video
+DOMAIN,accounts.google.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,withyoutube.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,youtube.googleapis.com
 
 # > GitHub Copilot / GitHub AI
 DOMAIN,api.githubcopilot.com

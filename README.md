@@ -1,6 +1,6 @@
 # OpenClash AI Rules
 
-开源的 OpenClash / Clash Meta AI 分流规则集，重点补强 Claude，同时覆盖 ChatGPT、Gemini、GitHub Copilot、Grok、Perplexity、Poe、Meta AI、Groq、Mistral 等常见 AI 服务。
+开源的 OpenClash / Clash Meta AI 分流规则集，重点补强 Claude，同时覆盖 ChatGPT、Gemini、YouTube / Google Video、GitHub Copilot、Grok、Perplexity、Poe、Meta AI、Groq、Mistral 等常见 AI 服务和相关访问链路。
 
 ## 仓库结构
 
@@ -13,7 +13,7 @@ README.md
 ## 规则目标
 
 - **Claude 全覆盖优先**：补充 `claude.com` 家族、MCP、平台页、支持页、遥测、认证以及 Anthropic IP / ASN 兜底
-- **兼顾主流 AI 服务**：覆盖 OpenAI / ChatGPT、Gemini / Google AI、GitHub Copilot / GitHub AI 等
+- **兼顾主流 AI 服务**：覆盖 OpenAI / ChatGPT、Gemini / Google AI、YouTube / Google Video、GitHub Copilot / GitHub AI 等
 - **尽量减少误伤**：不把普通网站整站粗暴纳入；关键词规则仅放最后兜底
 
 ## 当前覆盖
@@ -21,6 +21,7 @@ README.md
 - Claude / Anthropic
 - OpenAI / ChatGPT
 - Gemini / Google AI
+- YouTube / Google Video
 - GitHub Copilot / GitHub AI
 - xAI / Grok
 - Perplexity
@@ -73,7 +74,7 @@ rule-providers:
 
 ## 注意事项
 
-- 本仓库不是完整的全站分流配置，只包含 **AI 相关规则**
+- 本仓库不是完整的全站分流配置，只包含 **AI 相关规则和必要访问链路**
 - 不能直接替代整个 `2026.yaml`
 - 若你的主配置已经有单独的 ChatGPT / Gemini / Claude 规则，请注意规则顺序，避免被更早的 AI 总规则提前匹配
 - 规则会尽量保守，但关键词兜底仍可能带来少量误伤，建议结合自己的环境实测
