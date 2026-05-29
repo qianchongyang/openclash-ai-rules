@@ -56,6 +56,8 @@ https://raw.githubusercontent.com/qianchongyang/openclash-ai-rules/main/Shadowro
 
 规则目标：YouTube / Google Video 和 AI 服务优先走指定节点；国内访问直连；其他国外流量统一走手动选择的节点。
 
+该配置同时做了基础防泄露处理：DNS 默认使用随代理出口的 DoH，劫持常见硬编码 DNS，节点不支持 UDP 时拒绝直连回退，并对代理流量屏蔽 QUIC。
+
 ### 方式一：作为独立 AI 规则源
 
 在主配置里新增一个 rule-provider，例如：
