@@ -46,6 +46,16 @@ Clash classical rules 格式，可直接用于 OpenClash / Clash Meta 的规则�
 
 ## 使用方式
 
+### Shadowrocket 简化配置
+
+手机可直接导入这个配置：
+
+```text
+https://raw.githubusercontent.com/qianchongyang/openclash-ai-rules/main/Shadowrocket/shadowrocket_minimal.conf
+```
+
+规则目标：YouTube / Google Video 和 AI 服务优先走指定节点；国内访问直连；其他国外流量统一走手动选择的节点。
+
 ### 方式一：作为独立 AI 规则源
 
 在主配置里新增一个 rule-provider，例如：
