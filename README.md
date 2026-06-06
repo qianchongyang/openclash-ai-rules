@@ -1,19 +1,21 @@
 # OpenClash AI Rules
 
-开源的 OpenClash / Clash Meta AI 分流规则集，重点补强 Claude，同时覆盖 ChatGPT、Gemini、YouTube / Google Video、GitHub Copilot、Grok、Perplexity、Poe、Meta AI、Groq、Mistral 等常见 AI 服务和相关访问链路。
+开源的 OpenClash / Clash Meta AI 分流规则集，重点补强 Claude，同时覆盖 ChatGPT、Gemini、GitHub Copilot、Grok、Perplexity、Poe、Meta AI、Groq、Mistral 等常见 AI 服务和相关访问链路。YouTube / Google Video 已拆成独立视频规则源，避免普通视频流量混入 AI 策略组。
 
 ## 仓库结构
 
 ```text
 Rules/
   AI.list
+  YouTube.list
 README.md
 ```
 
 ## 规则目标
 
 - **Claude 全覆盖优先**：补充 `claude.com` 家族、MCP、平台页、支持页、遥测、认证以及 Anthropic IP / ASN 兜底
-- **兼顾主流 AI 服务**：覆盖 OpenAI / ChatGPT、Gemini / Google AI、YouTube / Google Video、GitHub Copilot / GitHub AI 等
+- **兼顾主流 AI 服务**：覆盖 OpenAI / ChatGPT、Gemini / Google AI、GitHub Copilot / GitHub AI 等
+- **视频规则单独维护**：YouTube / Google Video 拆到 `Rules/YouTube.list`，可单独绑定视频策略组
 - **尽量减少误伤**：不把普通网站整站粗暴纳入；关键词规则仅放最后兜底
 
 ## 当前覆盖
@@ -21,7 +23,6 @@ README.md
 - Claude / Anthropic
 - OpenAI / ChatGPT
 - Gemini / Google AI
-- YouTube / Google Video
 - GitHub Copilot / GitHub AI
 - xAI / Grok
 - Perplexity
@@ -43,6 +44,15 @@ Clash classical rules 格式，可直接用于 OpenClash / Clash Meta 的规则�
 - 带部分认证、遥测、CDN、IP / ASN 兜底
 - GitHub 只纳入 Copilot / GitHub AI 相关流量，不把整个 `github.com` 全量纳入
 - 关键词规则在最后，避免优先误伤
+
+### `Rules/YouTube.list`
+
+Clash classical rules 格式，用于 YouTube / Google Video 视频流量。
+
+特点：
+
+- 从 AI 规则源剥离，避免视频大流量进入 AI 策略组
+- 可在主配置中绑定到独立的视频策略组
 
 ## 使用方式
 
@@ -70,23 +80,30 @@ rule-providers:
     path: ./rule_provider/AI.list
     url: https://raw.githubusercontent.com/<owner>/<repo>/main/Rules/AI.list
     interval: 86400
+  YouTube / Domain:
+    type: http
+    behavior: classical
+    path: ./rule_provider/YouTube.list
+    url: https://raw.githubusercontent.com/<owner>/<repo>/main/Rules/YouTube.list
+    interval: 86400
 ```
 
 然后在 `rules:` 里加入：
 
 ```yaml
 - RULE-SET,AI / Domain,AI所有
+- RULE-SET,YouTube / Domain,YouTube视频
 ```
 
-建议把它放在 AI 相关规则前部，放在普通国外规则之前。
+建议把 YouTube 和 AI 规则都放在普通国外规则之前，并分别绑定到视频策略组和 AI 策略组。
 
 ### 方式二：替换现有 AI Suite
 
-如果你原来就有一个综合 AI 规则源，也可以把它的 URL 直接改到本仓库的 `Rules/AI.list`。
+如果你原来就有一个综合 AI 规则源，也可以把它的 URL 直接改到本仓库的 `Rules/AI.list`。如果原配置把 YouTube 也放在 AI 策略组里，建议额外新增 `Rules/YouTube.list` 规则源。
 
 ## 注意事项
 
-- 本仓库不是完整的全站分流配置，只包含 **AI 相关规则和必要访问链路**
+- 本仓库不是完整的全站分流配置，只包含 **AI 相关规则、必要访问链路和独立 YouTube 视频规则**
 - 不能直接替代整个 `2026.yaml`
 - 若你的主配置已经有单独的 ChatGPT / Gemini / Claude 规则，请注意规则顺序，避免被更早的 AI 总规则提前匹配
 - 规则会尽量保守，但关键词兜底仍可能带来少量误伤，建议结合自己的环境实测

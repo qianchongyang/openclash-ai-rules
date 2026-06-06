@@ -1,0 +1,17 @@
+# NAME: YouTube
+# AUTHOR: Codex
+# UPDATED: 2026-06-06
+# FORMAT: Clash classical rules
+# PURPOSE: YouTube and Google Video traffic split from AI rules
+
+# > YouTube / Google Video
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,withyoutube.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,youtube.googleapis.com
+DOMAIN-SUFFIX,video.google.com

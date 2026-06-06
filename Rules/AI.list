@@ -1,8 +1,8 @@
 # NAME: AI
 # AUTHOR: Claude Code
-# UPDATED: 2026-04-27
+# UPDATED: 2026-06-06
 # FORMAT: Clash classical rules
-# PURPOSE: AI traffic and related access chains; Claude full coverage first, plus ChatGPT / Gemini / YouTube / GitHub Copilot / other platforms
+# PURPOSE: AI traffic and related access chains; Claude full coverage first, plus ChatGPT / Gemini / GitHub Copilot / other platforms
 
 # > Claude / Anthropic 核心
 DOMAIN,api.anthropic.com
@@ -29,10 +29,7 @@ DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,trust.anthropic.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,statsigapi.net
-DOMAIN-SUFFIX,sentry.io
 IP-CIDR,160.79.104.0/21,no-resolve
 IP-CIDR6,2607:6bc0::/32,no-resolve
 IP-ASN,399358,no-resolve
@@ -56,8 +53,6 @@ DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,stripe.com
-DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,arkoselabs.com
 IP-ASN,20473,no-resolve
 
@@ -74,30 +69,14 @@ DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-SUFFIX,android.googleapis.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
-
-# > YouTube / Google Video
-DOMAIN,accounts.google.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,withyoutube.com
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,youtubei.googleapis.com
-DOMAIN-SUFFIX,youtube.googleapis.com
 
 # > GitHub Copilot / GitHub AI
 DOMAIN,api.githubcopilot.com
 DOMAIN,origin-tracker.githubusercontent.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,githubcopilotusercontent.com
-DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,business.githubcopilot.com
 DOMAIN-KEYWORD,copilot
@@ -132,5 +111,4 @@ DOMAIN-KEYWORD,gemini
 DOMAIN-KEYWORD,grok
 DOMAIN-KEYWORD,perplexity
 DOMAIN-KEYWORD,poe
-DOMAIN-KEYWORD,datadog
 DOMAIN-KEYWORD,sift
